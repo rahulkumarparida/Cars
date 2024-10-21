@@ -189,25 +189,49 @@ background-size:100% 90% ;
     }
 
     /* footer */
-    footer{
-        bottom: 0rem;
-        background-color: rgb(11, 11, 11);
-          height: 60vh;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-evenly;
-          align-items: center;
-          color: white;
-        }
-       .end{
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
-       }
-       .end>ul{
-        padding: 0 40px;
-       }
-       li{
-       list-style: none;
-       padding: 8px;
-       }
+    footer {
+      background-color: rgb(11, 11, 11);
+      padding: 40px 20px; /* Increased padding for better spacing */
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Container for footer sections */
+  .end {
+      display: flex;
+      flex: 1; /* Allow the section to grow */
+      justify-content: space-around;
+      align-items: flex-start;
+      flex-wrap: wrap; /* Allow wrapping on smaller screens */
+      max-width: 1200px; /* Center the footer content */
+      margin: 0 auto; /* Center alignment */
+  }
+  
+  /* Styling for each list */
+  .end ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 20px; /* Margin for spacing */
+      width: 200px; /* Fixed width for consistency */
+  }
+  
+  h3 {
+      font-size: 1.5rem; /* Font size for headings */
+      margin-bottom: 10px; /* Space below headings */
+      border-bottom: 1px solid rgb(24, 224, 227); /* Underline for headings */
+      padding-bottom: 5px; /* Padding for headings */
+  }
+  
+  /* Styling for list items */
+  li {
+      padding: 8px 0; /* Vertical padding for list items */
+      transition: color 0.3s; /* Smooth color transition */
+  }
+  
+  li:hover {
+      color: rgb(24, 224, 227); /* Hover effect on list items */
+  }
