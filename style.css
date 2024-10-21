@@ -22,8 +22,7 @@ body{
 
 /* Logo styling */
 .logoContent img {
-  width: 100px; /* Adjusted size */
-  height: auto;
+  width: 60px; 
 }
 
 /* Links styling */
