@@ -232,46 +232,73 @@ body {
 .model:hover::before {
   opacity: 1; /* Show overlay on hover */
 }
-
-/* Performance Section */
+/* performance */
 .performance {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #121212; /* Darker background */
+  color: #f0f0f0; /* Light text color */
+  padding: 40px 20px; /* Increased padding for more space */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  text-align: center; /* Center align text */
+  height: 300px; /* Increased height */
 }
 
 .spec-box {
-  display: flex;
-  justify-content: space-evenly;
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center the items */
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  height: 100%; /* Full height for the flexbox */
+  align-items: center; /* Center items vertically */
 }
 
-.hp,
-.trq,
-.spd {
-  color: rgb(246, 246, 246);
-  list-style: none;
-  height: 30rem;
-  width: 25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.spec-box li {
+  flex: 1; /* Equal width for all items */
+  margin: 0 15px; /* Space between items */
+  transition: transform 0.3s; /* Animation effect on hover */
+}
+
+.spec-box li:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
 }
 
 .spec-box p {
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* Increased font size for labels */
+  margin-bottom: 10px; /* Space between label and value */
 }
 
 .spec-box h1 {
-  font-size: 4rem;
-  display: flex;
-  gap: 1rem;
+  font-size: 3rem; /* Increased font size for the numbers */
+  margin: 0; /* Remove default margin */
+}
+
+.spec-box h1 p {
+  font-size: 1.2rem; /* Font size for units */
+  margin-top: 5px; /* Space above units */
 }
 
 .line {
-  height: 70vh;
-  width: 0px;
-  border: 1px solid rgb(22, 203, 219);
+  width: 1px; /* Line width */
+  height: 80px; /* Line height */
+  background-color: #444; /* Line color */
+  margin: 0 15px; /* Space around the line */
+}
+
+
+
+.counting-animation {
+  animation: countUp 1s ease-in-out forwards; /* Animation for counting */
+}
+
+@keyframes countUp {
+  0% {
+      opacity: 0; /* Start invisible */
+      transform: translateY(20px); /* Move up */
+  }
+  100% {
+      opacity: 1; /* Fully visible */
+      transform: translateY(0); /* Move back to original */
+  }
 }
 
 /* Footer */
@@ -322,3 +349,6 @@ li {
 li:hover {
   color: rgb(24, 224, 227);
 }
+
+
+
