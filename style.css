@@ -160,6 +160,58 @@ body {
   margin: 20px 0; /* Spacing around text */
 }
 
+/* Testimonial Section */
+.testimonials {
+  padding: 60px 20px; /* Adjust padding */
+  background-color: rgb(30, 30, 30); /* Background color for contrast */
+  color: white; /* Text color */
+  text-align: center; /* Center align text */
+}
+
+.testimonials h2 {
+  font-size: 2.5rem; /* Heading size */
+  margin-bottom: 40px; /* Spacing below heading */
+}
+
+/* Container for testimonials */
+.testimonial-container {
+  display: flex;
+  justify-content: center; /* Center align testimonials */
+  flex-wrap: wrap; /* Allow wrapping */
+  gap: 20px; /* Space between testimonials */
+}
+
+/* Individual testimonial styling */
+.testimonial {
+  background-color: #1a1a1a; /* Dark background for each testimonial */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside testimonial */
+  width: 300px; /* Fixed width for each testimonial */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  transition: transform 0.3s ease; /* Transition for hover effect */
+}
+
+.testimonial:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Image styling */
+.testimonial img {
+  width: 80px; /* Adjust image width as needed */
+  height: 80px; /* Adjust image height to maintain aspect ratio */
+  border-radius: 50%; /* Circular images */
+  margin-bottom: 15px; /* Spacing below image */
+  object-fit: cover; /* Ensures the image covers the space without distortion */
+}
+
+/* Styling for the user's name */
+.testimonial h3 {
+  margin-top: 10px; /* Spacing above name */
+  font-size: 1.2rem; /* Font size for name */
+  color: rgb(24, 224, 227); /* Color for name */
+}
+
+
 /* Add overlay effect for better visibility */
 .model::before {
   content: "";
