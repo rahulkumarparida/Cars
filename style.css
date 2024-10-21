@@ -1,3 +1,4 @@
+/* General Styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,7 +7,7 @@
 
 body {
   background-color: rgb(20, 19, 19);
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif; /* Change font to Montserrat */
 }
 
 /* Navbar section */
@@ -52,45 +53,21 @@ body {
 /* Mobile responsive */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
   }
 
   .links {
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
   }
 
   .links a {
-    padding: 15px;
-    width: 100%;
-    text-align: left;
-  }
-
-  .models {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .model {
-    width: 80%; /* Make models take full width */
-    margin-bottom: 20px;
-  }
-
-  .performance {
-    flex-direction: column; /* Stack performance items */
-    align-items: center;
-  }
-
-  .spec-box {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .line {
-    display: none; /* Hide line on small screens */
+      padding: 15px;
+      width: 100%;
+      text-align: left;
   }
 }
 
@@ -139,43 +116,69 @@ body {
 
 /* Models Section */
 .models {
-  padding: 60px 0;
+  padding: 60px 20px; /* Adjust padding for smaller screens */
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  gap: 20px; /* Space between items */
 }
 
 .model {
-  height: 70vh;
-  width: 20%;
+  height: 60vh; /* Maintain height */
+  width: 100%; /* Full width on smaller screens */
+  max-width: 300px; /* Limit the width on larger screens */
   display: flex;
   flex-direction: column;
   justify-content: flex-end; /* Align text at the bottom */
   color: white;
   text-align: center;
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow */
+  transition: transform 0.3s ease; /* Animation on hover */
+  position: relative; /* Needed for absolute positioning of overlay */
+  background-size: cover; /* Ensure background image covers the model */
+  background-position: center; /* Center the image */
 }
 
 .one {
   background-image: url(https://i.pinimg.com/564x/d4/bb/69/d4bb697a2941b08ff749fef2f58c51b9.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .two {
   background-image: url(https://i.pinimg.com/564x/ad/93/be/ad93bef33e4630742f13a92005409140.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .three {
   background-image: url(https://i.pinimg.com/564x/08/ae/2f/08ae2fa3f4aa5f7aedd374107a49757d.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .models h1 {
-  font-family: "Pacifico", cursive;
-  font-weight: 400;
+  font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+  font-weight: 600; /* Change font weight for prominence */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+  margin: 20px 0; /* Spacing around text */
+}
+
+/* Add overlay effect for better visibility */
+.model::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease; /* Smooth transition for overlay */
+}
+
+.model:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.model:hover::before {
+  opacity: 1; /* Show overlay on hover */
 }
 
 /* Performance Section */
@@ -266,16 +269,4 @@ li {
 
 li:hover {
   color: rgb(24, 224, 227);
-}
-
-/* Additional mobile styling for footer */
-@media (max-width: 768px) {
-  footer {
-    padding: 20px 10px;
-  }
-
-  .end ul {
-    width: 100%; /* Full width for lists on small screens */
-    margin-bottom: 20px; /* Space between lists */
-  }
 }
