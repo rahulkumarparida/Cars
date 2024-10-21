@@ -1,0 +1,161 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Added for better box model handling */
+}
+
+/* Body styling */
+body {
+    background-color: rgb(20, 20, 20); /* Dark background */
+    color: white; /* Default text color */
+    font-family: Arial, sans-serif; /* General font */
+}
+
+/* Header styling */
+header {
+    background-color: #1a1a1a; /* Dark header */
+    padding: 15px 30px;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo styling */
+.logoContent img {
+    width: 60px; /* Logo size */
+}
+
+/* Links styling */
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.links a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.links a:hover {
+    background-color: #333; /* Hover effect */
+    color: rgb(24, 224, 227);
+    box-shadow: 0 0 10px rgba(24, 224, 227, 0.5);
+}
+
+/* About section styling */
+.about-section {
+    padding: 40px 20px;
+    text-align: center; /* Centering the content */
+}
+
+.about-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px; /* Spacing below the title */
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    line-height: 1.6; /* Better readability */
+    margin: 20px auto; /* Center the paragraph with some margin */
+    max-width: 800px; /* Limit the width of the paragraph */
+}
+
+/* Image gallery */
+.about-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.about-images img {
+    width: 300px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    margin: 10px;
+    border-radius: 10px; /* Rounded corners for images */
+    transition: transform 0.3s ease; /* Animation effect on hover */
+}
+
+.about-images img:hover {
+    transform: scale(1.05); /* Slightly enlarges the image on hover */
+}
+
+/* Mission and Values sections */
+.mission-section, .values-section {
+    margin-top: 40px; /* Spacing above each section */
+    text-align: left; /* Align text to the left */
+    max-width: 800px; /* Limit the width of the sections */
+    margin-left: auto; /* Center the sections */
+    margin-right: auto; /* Center the sections */
+}
+
+.values-section ul {
+    list-style: none; /* Remove bullets */
+    padding-left: 0; /* Remove left padding */
+}
+
+.values-section li {
+    margin: 5px 0; /* Spacing between list items */
+    animation: fadeIn 0.5s ease forwards; /* Add fade-in animation */
+}
+
+/* Footer styling */
+footer {
+    background-color: rgb(11, 11, 11);
+    padding: 40px 20px; /* Increased padding for better spacing */
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Container for footer sections */
+.end {
+    display: flex;
+    flex: 1; /* Allow the section to grow */
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    max-width: 1200px; /* Center the footer content */
+    margin: 0 auto; /* Center alignment */
+}
+
+/* Styling for each list */
+.end ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 20px; /* Margin for spacing */
+    width: 200px; /* Fixed width for consistency */
+}
+
+/* Headings styling */
+h3 {
+    margin-bottom: 10px; /* Spacing below section headings */
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px); /* Start slightly lower */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End in original position */
+    }
+}
