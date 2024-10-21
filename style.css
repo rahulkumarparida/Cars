@@ -52,21 +52,45 @@ body {
 /* Mobile responsive */
 @media (max-width: 768px) {
   .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
   }
 
   .links {
-      flex-direction: column;
-      width: 100%;
-      gap: 10px;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
   }
 
   .links a {
-      padding: 15px;
-      width: 100%;
-      text-align: left;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .models {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .model {
+    width: 80%; /* Make models take full width */
+    margin-bottom: 20px;
+  }
+
+  .performance {
+    flex-direction: column; /* Stack performance items */
+    align-items: center;
+  }
+
+  .spec-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .line {
+    display: none; /* Hide line on small screens */
   }
 }
 
@@ -242,4 +266,16 @@ li {
 
 li:hover {
   color: rgb(24, 224, 227);
+}
+
+/* Additional mobile styling for footer */
+@media (max-width: 768px) {
+  footer {
+    padding: 20px 10px;
+  }
+
+  .end ul {
+    width: 100%; /* Full width for lists on small screens */
+    margin-bottom: 20px; /* Space between lists */
+  }
 }
