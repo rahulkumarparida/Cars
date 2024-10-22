@@ -3,99 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audi</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Multiple on Click</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #f4f4f4;
+        }
+
+        a {
+            text-decoration: none;
+            color: #f4f4f4;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #1a1a1a;
+            border-bottom: 1px solid #333;
+        }
+        
+        .logoContent img {
+            height: 50px;
+        }
+
+        .links a {
+            margin: 0 20px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .links a:hover {
+            color: #b0b0b0; /* Muted light gray on hover */
+        }
+
+        /* Slider Section */
+        .section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+            background-color: #1a1a1a;
+        }
+
+        .section img {
+            width: 100%;
+            max-width: 1200px;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            filter: brightness(0.8);
+            transition: filter 0.5s;
+        }
+
+        .section img:hover {
+            filter: brightness(1);
+        }
+
+        /* Models Section */
+        .models {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #181818;
+        }
+
+        .model {
+            text-align: center;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .model h1 {
+            color: #b0b0b0; /* Muted light gray */
+        }
+
+        .model img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .model:hover {
+            transform: scale(1.05);
+            background-color: #333;
+        }
+
+        /* Performance Section */
+        .performance {
+            margin: 20px 0;
+            text-align: center;
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .spec-box {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .spec-box li {
+            list-style: none;
+            font-size: 24px;
+            color: #b0b0b0; /* Muted light gray */
+        }
+
+        .line {
+            border-left: 2px solid #555;
+            height: 60px;
+            margin: auto 20px;
+        }
+
+        /* Footer */
+        .foot {
+            background-color: #1a1a1a;
+            padding: 30px 0;
+            color: #f4f4f4;
+        }
+
+        .foot h3 {
+            color: #b0b0b0; /* Muted light gray */
+        }
+
+        .foot ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .foot ul li {
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .foot ul li:hover {
+            color: #b0b0b0; /* Muted light gray */
+        }
+
+        .end {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .end ul {
+            width: 18%;
+        }
+
+        /* Responsive Design */
+        @media only screen and (max-width: 768px) {
+            .models {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .model {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .spec-box {
+                flex-direction: column;
+            }
+
+            .line {
+                display: none;
+            }
+
+            .end {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .end ul {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header> 
-      <nav class="navbar">
-        <div class="logoContent">
-          <img src="./images/Logo.png" alt="Audi Logo">
-        </div>
-        <div class="links">
-          <a href="#">Home</a>
-          <a href="about.html">About Us</a>
-          <a href="#">Products</a>
-          <a href="#">Contact Us</a>
-        </div>
-      </nav>
+        <nav class="navbar">
+            <div class="logoContent">
+                <img src="6937487_preview.png" alt="Audi Logo">
+            </div>
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Products</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </nav>
     </header>
-    
-    <section class="section" class="section" id="sliders">
-        <div class="slide active">
-            <img src="./images/car-1.jpeg" alt="Car 1">
-        </div>
-        <div class="slide">
-            <img src="./images/car-2.jpeg" alt="Car 2">
-        </div>
-        <div class="slide">
-            <img src="./images/car-3.jpeg" alt="Car 3">
-        </div>
-        <div class="slide">
-            <img src="./images/car-4.jpeg" alt="Car 4">
-        </div>
-        <div class="dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
+
+    <!-- Slider Section -->
+    <section class="section" id="sliders">
+        <img src="audie-trongtconcept3-639929.jpg" alt="Car 1" class="slide">
+        <img src="A233029_large.jpg" alt="Car 2" class="slide">
+        <img src="fddf.webp" alt="Car 3" class="slide">
+        <img src="R8070059_large.jpg" alt="Car 4" class="slide">
     </section>
 
+    <!-- Models Section -->
     <div class="models">
         <div class="model one">
+            <img src="q3_1.jpg" alt="Audi Q3">
             <h1>Audi Q3</h1>
         </div>
         <div class="model two">
+            <img src="s8.jpg" alt="Audi S8">
             <h1>Audi S8</h1>
         </div>
         <div class="model three">
+            <img src="rs7.jpg" alt="Audi RS 7">
             <h1>Audi RS 7</h1>
         </div>
     </div>
 
-    <!-- Testimonial Section -->
-<section class="testimonials">
-  <h2>What Our Customers Say</h2>
-  <div class="testimonial-container">
-      <div class="testimonial">
-          <img src="./images/user-1.jpg" alt="User 1">
-          <p>"The Audi Q3 is an incredible car! The performance is unmatched, and the design is stunning!"</p>
-          <h3>John Doe</h3>
-      </div>
-      <div class="testimonial">
-          <img src="./images/user-2.jpg" alt="User 2">
-          <p>"I love my Audi S8! The luxury features and smooth ride make every journey enjoyable."</p>
-          <h3>Jane Smith</h3>
-      </div>
-      <div class="testimonial">
-          <img src="./images/user-3.jpg" alt="User 3">
-          <p>"The Audi RS 7 is the perfect combination of speed and comfort. Highly recommend!"</p>
-          <h3>Emily Johnson</h3>
-      </div>
-  </div>
-</section>
-
-    
+    <!-- Performance Section -->
     <div class="performance">
         <ul class="spec-box">
-            <li class="hp">
-                <p>HorsePower</p>
-                <h1>444<p>HP</p></h1>
-            </li>
+            <li class="hp"><p>HorsePower</p> <h1>444<p>HP</p></h1></li>
             <div class="line"></div>
-            <li class="trq">
-                <p>Torque</p>
-                <h1>442<p>lb-ft</p></h1>
-            </li>
+            <li class="trq"><p>Torque</p><h1>442<p>lb-ft</p></h1></li>
             <div class="line"></div>
-            <li class="spd">
-                <p>0-60mph</p>
-                <h1>3.7<p>sec</p></h1>
-            </li>
+            <li class="spd"><p>0-60mph</p><h1>3.7<p>sec</p></h1></li>
         </ul>
     </div>
 
+    <!-- Footer Section -->
     <footer class="foot">
         <div class="end">
             <ul class="explore">
@@ -105,10 +254,6 @@
                 <li>What is e-tron®</li>
                 <li>SUV Models</li>
                 <li>Audi Experience</li>
-                <li>Inclusion & Diversity</li>
-                <li>Electric Models</li>
-                <li>Inside Audi</li>
-                <li>Subscribe to model updates</li>
             </ul>
             <ul class="shop">
                 <h3>Shop</h3>
@@ -131,12 +276,8 @@
                 <li>myAudi</li>
                 <li>About myAudi</li>
                 <li>Audi Financial Services</li>
-                <li>Audi collection store</li>
-                <li>Accessories</li>
-                <li>Audi connect</li>
                 <li>Service and Parts</li>
                 <li>Roadside Assistance</li>
-                <li>In-Use Verification Program</li>
             </ul>
             <ul class="support">
                 <h3>Support</h3>
@@ -148,11 +289,31 @@
                 <li>Emissions Modification Lookup</li>
                 <li>Accessibility</li>
                 <li>Recalls</li>
-                <li>INDUSTRY GUIDANCE FOR EMERGENCY RESPONDERS</li>
             </ul>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Animation for sliders
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function changeSlide() {
+            slides[currentSlide].style.display = 'none';
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].style.display = 'block';
+        }
+
+        slides.forEach((slide, index) => {
+            if (index !== 0) slide.style.display = 'none';
+        });
+
+        setInterval(changeSlide, 3000); // Change slide every 3 seconds
+    </script>
 </body>
 </html>
+
+
+
+
+
