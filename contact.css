@@ -1,0 +1,28 @@
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+.container {
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+    margin: 0;
+    padding: 20px 0 20px 10px;
+}
+
+.office-container , .queries-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contact-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
